@@ -1,0 +1,1052 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  /* colors */
+  --ivory: #EDE7DC;
+  --sandDollar: #DCD2CC;
+  --dustyRose: #CCAFA5;
+  --customGray: #BDC3CB;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--ivory);
+}
+
+div {
+  font-size: 1.4rem;
+}
+
+h1, h2, h3, h4, h5, h6, p, q{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+section {
+  margin: 30px 0;
+}
+
+.small {
+  font-size: 1rem;
+}
+
+.medium {
+  font-size: 1.2rem;
+}
+
+.transparentText {
+  color: #666;
+}
+
+li {
+  font-size: 1.3rem;
+}
+
+.line {
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--dustyRose);
+}
+
+/* container */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/* header start*/
+.header {
+  background-color: var(--sandDollar);
+  margin-bottom: 30px;
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  font-size: 3rem;
+  font-family: 'Marck Script', sans-serif;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* navigation start*/
+.nav {
+  display: flex;
+}
+
+.navMobile {
+  display: none;
+}
+
+.hamburgerButton {
+  display: none;
+}
+
+.navUl {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLi {
+  margin-left: 30px;
+}
+
+.navLink {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+.navLink:hover {
+  background-color: var(--dustyRose);
+}
+
+.active {
+  background-color: var(--customGray);
+  cursor: default
+}
+
+.active:hover {
+  background-color: var(--customGray);
+  cursor: default
+}
+
+/* navigation end*/
+
+/* header end*/
+
+
+
+/* homePage start---------------------------------------------------------------------------------*/
+
+.mainInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.photo {
+  width: 40%;
+}
+
+.photoImage {
+  width: 100%;
+  border-radius: 50%;
+  border: 4px solid var(--customGray);
+  box-shadow: -3px 3px 15px black;
+}
+
+.description {
+  width: 40%;
+}
+
+q {
+  font-style: italic;
+  color: #666;
+  font-size: 16px;
+}
+
+.cardContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin: 30px 0;
+}
+
+.certificateCardContainer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin: 30px 0;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+
+.activeCard {
+  transform: rotateY(180deg);
+}
+
+.frontCard {
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: var(--dustyRose);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.frontCardInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frontCardInner a {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: var(--sandDollar);
+  border-top: 2px solid var(--customGray);
+  transition: all 0.5s ease;;
+}
+
+.frontCardInner a:hover {
+  background-color: var(--customGray);
+}
+
+.frontCard img {
+  width: 100%;
+}
+
+.backCard {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: var(--customGray);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.backCardInfo {
+  text-align: center;
+  padding: 30px;
+}
+
+.extraCard {
+  width: 30%;
+}
+
+/* homePage end---------------------------------------------------------------------------------*/
+
+
+
+/* educationPage start---------------------------------------------------------------------------------*/
+
+/* educationSection start*/
+.eduName {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.education {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.educationBlock {
+  margin: 20px 0;
+  display: flex;
+  align-self: start;
+  align-items: center;
+  width: 45%;
+}
+
+.eduIcon {
+  width: 15%;
+}
+
+.eduBlockInfo {
+  width: 85%;
+}
+/* educationSection end*/
+
+/* achievementsSection start*/
+
+.achievements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.achievementsBlock {
+  width: 30%;
+}
+
+.achievementsName {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.whiteBg {
+  background-color: white;
+  border: 2px solid var(--customGray);
+}
+/* achievementsSection end*/
+
+/* educationPage end---------------------------------------------------------------------------------*/
+
+
+
+
+/* workPage start---------------------------------------------------------------------------------*/
+
+/* professionalSkillsSection start*/
+.skillsName {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skillBlock {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+}
+.skillIcon {
+  
+}
+
+.skillBlockInfo {
+  text-align: center;
+}
+/* professionalSkillsSection end*/
+
+/* languagesSection start*/
+
+.languagesName {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.languageBlock {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+.languageIcon {
+  
+}
+
+.languageBlockInfo {
+  text-align: center;
+}
+/* languagesSection end*/
+
+/* workExpSection start*/
+.workExpName {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.workExp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.workExpBlock {
+  margin: 20px 0;
+  display: flex;
+  align-self: start;
+  align-items: center;
+  width: 45%;
+}
+
+.workExpIcon {
+  width: 15%;
+}
+
+.workExpBlockInfo {
+  width: 85%;
+}
+/* workExpSection end*/
+
+/* workPage end---------------------------------------------------------------------------------*/
+
+
+
+/* skillsPage start---------------------------------------------------------------------------------*/
+
+/* personalSkillsSection start*/
+.personalSkillsName {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.personalSkills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.personalSkillsBlock {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+}
+.personalSkillsIcon {
+  
+}
+
+.personalSkillsBlockInfo {
+  text-align: center;
+}
+/* personalSkillsSection end*/
+
+/* extracurricularActivitiesSection start*/
+.extracurrActivitiesName {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.extracurrActivities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.extracurrActivitiesBlock {
+  margin: 20px 0;
+  display: flex;
+  align-self: start;
+  align-items: center;
+  width: 45%;
+}
+
+.extracurrActivitiesIcon {
+  width: 15%;
+}
+
+.extracurrActivitiesBlockInfo {
+  width: 85%;
+}
+
+/* extracurricularActivitiesSection end*/
+
+/* skillsPage end---------------------------------------------------------------------------------*/
+
+
+
+
+
+/* contactsPage start---------------------------------------------------------------------------------*/
+
+/* contactsSection start */
+.contactsName {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.contactsBlock {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.contactsBlock a {
+  border-radius: 10px;
+  padding: 10px 20px;
+  background-color: var(--dustyRose);
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s ease;
+}
+
+.contactsBlock a:hover {
+  background-color: var(--customGray);
+}
+
+.contactsIcon {
+  
+}
+
+.contactsBlockInfo {
+  width: 80%;
+  text-align: center;
+}
+
+.contactsBlockInfo h4 {
+  width: 100%;
+  word-wrap: break-word;
+}
+/* contactsSection end */
+
+/* contactsPage end---------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .eduIcon {
+    width: 20%;
+  }
+  
+  .eduBlockInfo {
+    width: 80%;
+  }
+
+  .workExpIcon {
+    width: 20%;
+  }
+  
+  .workExpBlockInfo {
+    width: 80%;
+  }
+
+  .extracurrActivitiesIcon {
+    width: 20%;
+  }
+  
+  .extracurrActivitiesBlockInfo {
+    width: 80%;
+  }
+
+  
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .eduIcon {
+    width: 20%;
+  }
+  
+  .eduBlockInfo {
+    width: 80%;
+  }
+
+  .workExpIcon {
+    width: 20%;
+  }
+  
+  .workExpBlockInfo {
+    width: 80%;
+  }
+
+  .extracurrActivitiesIcon {
+    width: 20%;
+  }
+  
+  .extracurrActivitiesBlockInfo {
+    width: 80%;
+  }
+
+  .personalSkillsBlock {
+    width: 30%;
+  }
+
+  .achievementsBlock {
+    width: 40%;
+  }
+
+  .certificateCardContainer {
+    height: 550px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+
+  div {
+    font-size: 1.2rem;
+  }
+  
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 2.0rem;
+  }
+  
+  h3 {
+    font-size: 1.6rem;
+  }
+  
+  h4 {
+    font-size: 1.1rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+  
+  li {
+    font-size: 1.1rem;
+  }
+
+  .educationBlock {
+    width: 100%;
+  }
+
+  .eduIcon {
+    width: 15%;
+  }
+  
+  .eduBlockInfo {
+    width: 85%;
+  }
+
+  .workExpBlock {
+    width: 100%;
+  }
+
+  .workExpIcon {
+    width: 15%;
+  }
+  
+  .workExpBlockInfo {
+    width: 85%;
+  }
+
+  .extracurrActivitiesBlock {
+    width: 100%;
+  }
+
+  .extracurrActivitiesIcon {
+    width: 15%;
+  }
+  
+  .extracurrActivitiesBlockInfo {
+    width: 85%;
+  }
+
+  .navLi {
+    margin-left: 20px;
+  }
+
+  .languages {
+    justify-content: space-around;
+  }
+
+  .languageBlock {
+    width: 33%;
+  }
+
+  .achievementsBlock {
+    width: 44%;
+  }
+
+  .certificateCardContainer {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+
+  div {
+    font-size: 1.1rem;
+  }
+  
+  h1 {
+    font-size: 2.0rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+  
+  h4 {
+    font-size: 1.0rem;
+  }
+  
+  p {
+    font-size: 1.0rem;
+  }
+  
+  li {
+    font-size: 1.0rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .photo {
+    width: 50%;
+  }
+
+  .hamburgerButton {
+    display: block;
+  }
+
+  .navMobile {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 0;
+  }
+
+  .navUlMobile {
+    display: block;
+    list-style: none;
+  }
+
+  .navLiMobile {
+    width: 100%;
+    border: 1px solid var(--customGray);
+    background-color: var(--sandDollar);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navLiMobile a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 6px 0;
+  }
+
+  .showNavMobile {
+    display: block;
+  }
+
+  .eduIcon {
+    width: 20%;
+  }
+  
+  .eduBlockInfo {
+    width: 80%;
+  }
+
+  .workExpIcon {
+    width: 20%;
+  }
+  
+  .workExpBlockInfo {
+    width: 80%;
+  }
+
+  .extracurrActivitiesIcon {
+    width: 20%;
+  }
+  
+  .extracurrActivitiesBlockInfo {
+    width: 80%;
+  }
+
+  .achievementsBlock {
+    width: 70%;
+  }
+
+  .certificateCardContainer {
+    height: 540px;
+  }
+  
+  .whiteBg p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  div {
+    font-size: 1.0rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  h4 {
+    font-size: 0.9rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+  li {
+    font-size: 1.2rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .mainInfo {
+    display: block;
+  }
+
+  .description {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .photo {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .hamburgerButton {
+    display: block;
+  }
+
+  .navMobile {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+  }
+
+  .navUlMobile {
+    display: block;
+    list-style: none;
+  }
+
+  .navLiMobile {
+    width: 100%;
+    border: 1px solid var(--customGray);
+    background-color: var(--sandDollar);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navLiMobile a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    
+  }
+
+  .showNavMobile {
+    display: block;
+  }
+
+  .education {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .eduIcon img{
+    width: 48px;
+  }
+
+  .languages {
+    justify-content: space-around;
+  }
+
+  .languageBlock {
+    width: 45%;
+  }
+
+  .eduIcon {
+    width: 25%;
+  }
+  
+  .eduBlockInfo {
+    width: 75%;
+  }
+
+  .workExp {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .workExpIcon img{
+    width: 48px;
+  }
+
+  .workExpIcon {
+    width: 25%;
+  }
+  
+  .workExpBlockInfo {
+    width: 75%;
+  }
+
+  .extracurrActivities {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .extracurrActivitiesIcon {
+    width: 25%;
+  }
+  
+  .extracurrActivitiesBlockInfo {
+    width: 75%;
+  }
+
+  .extracurrActivitiesIcon img{
+    width: 48px;
+  }
+
+  .skills {
+    justify-content: center;
+  }
+
+  .skillBlock {
+    width: 70%;
+  }
+
+  .line {
+    border-radius: 0px;
+  }
+
+  .backCardInfo {
+    font-size: 18px;
+  }
+
+  .contactsBlock {
+    width: 45%;
+  }
+
+  .personalSkillsBlock {
+    width: 45%;
+  }
+
+  .personalSkillsBlockInfo {
+    width: 100%;
+  }
+
+  .personalSkillsBlockInfo p {
+    word-wrap: break-word;
+  }
+
+  .achievementsBlock {
+    width: 290px;
+  }
+
+  .certificateCardContainer {
+    height: 410px;
+  }
+
+  .backCardInfo {
+    font-size: 14px;
+  }
+}
